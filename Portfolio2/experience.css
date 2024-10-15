@@ -1,0 +1,415 @@
+body {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5));
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.glass_background {
+    position: absolute;
+    height: 85vh;
+    width: 93vw;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)); /* Slightly more visible gradient */
+    backdrop-filter: blur(10px) saturate(150%); /* Increased blur and saturation for a more glassy effect */
+    -webkit-backdrop-filter: blur(10px) saturate(150%); /* Same for webkit */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Slightly more visible border */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5); /* Darker shadow for more depth */
+    left: 4%;
+    top: 7%;
+    border-radius: 30px;
+    overflow: hidden; /* Ensure content stays within rounded corners */
+    z-index: 1;
+}
+
+.image{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.title{
+    position: absolute;
+    left: 50.9%;
+    top: 3%;
+    z-index: 3;
+    font-size: 50px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    z-index: 5;
+    cursor: pointer
+}
+
+.title_background{
+    position: relative;
+    top: 3.5%;
+    left: 50%;
+    z-index: 3;
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    border: 6px solid white;
+    rotate: 50deg;
+}
+
+.portfolio{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    left: 40%;
+    top: 5.8%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.portfolio::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: white;
+    width: 0%; /* Start with width at 0% */
+    left: 0px;
+    opacity: 0; /* Start with opacity at 0 */
+    transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition for width and opacity */
+}
+
+.portfolio:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make visible on hover */
+}
+
+.projects{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    left: 31%;
+    top: 5.8%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+nav a {
+    text-decoration: none; /* Remove underline */
+    color: inherit;        /* Inherit the color from the parent element */
+}
+
+.projects::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: white;
+    width: 0%; /* Start with width at 0% */
+    left: 0px;
+    opacity: 0; /* Start with opacity at 0 */
+    transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition for width and opacity */
+}
+
+.projects:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make visible on hover */
+}
+
+.experience{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    left: 57%;
+    top: 5.8%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.experience::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: white;
+    width: 0%; /* Start with width at 0% */
+    left: 0px;
+    opacity: 0; /* Start with opacity at 0 */
+    transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition for width and opacity */
+}
+
+.experience:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make visible on hover */
+}
+
+.contact{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    left: 67%;
+    top: 5.8%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.contact::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: white;
+    width: 0%; /* Start with width at 0% */
+    left: 0px;
+    opacity: 0; /* Start with opacity at 0 */
+    transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition for width and opacity */
+}
+
+.contact:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make visible on hover */
+}
+
+.email_label{
+    position: absolute;
+    top: 63vh;
+    left: 44.2vw;
+    font-size: 30px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.form{
+    position: absolute;
+    top: 85%;
+    left: 34%;
+}
+.textbox{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    border-radius: 10px;
+    width: 500px;
+    border: 2px solid rgb(0, 0, 0);
+    height: 50px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.info_background {
+    position: absolute;
+    top: 25vh;
+    left: 5vw;
+    height: 40vh;
+    width: 40vw;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6); /* Maintain depth */
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border to enhance effect */
+}
+
+
+.info{
+    position: absolute;
+    font-size: 60px;
+    color: white;
+    top: 26vh;
+    left: 7vw;
+    font-family: "Righteous", sans-serif;
+    font-weight: 10;
+    font-style: normal;
+    width: 35vw;
+    text-align: center;
+}
+
+.divider{
+    position: absolute;
+    top: 20vh;
+    left: 51vw;
+    height: 50vh;
+    width: 2px;
+    background-color: white;
+}
+
+.email {
+    position: absolute;
+    top: 26vh;
+    height: 10vh;
+    width: 25vw;
+    left: 58vw;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6); /* Maintain depth */
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border to enhance effect */
+    border-radius: 5px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+
+.phone{
+    position: absolute;
+    top: 40vh;
+    height: 10vh;
+    width: 25vw;
+    left: 58vw;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6); /* Maintain depth */
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border to enhance effect */
+    border-radius: 5px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.location{
+    position: absolute;
+    top: 54vh;
+    height: 10vh;
+    width: 25vw;
+    left: 58vw;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6); /* Maintain depth */
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border to enhance effect */
+    border-radius: 5px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.email_img{
+    position: inherit;
+    top: .6vh;
+    left: .5vw;
+}
+
+.email_text{
+    position: absolute;
+    color: white;
+    font-family: "Righteous", sans-serif;
+    font-weight: 10;
+    font-style: normal;
+    left: 7.5vw;
+    top: 3.8vh;
+    font-size: 18px;
+}
+
+.call_img{
+    position: inherit;
+    top: .9vh;
+    left: .8vw;
+    z-index: 3;
+}
+
+.call_img_background{
+    position: absolute;
+    top: 1vh;
+    left: .91vw;
+    height: 6.4vh;
+    width: 2.9vw;
+    background-color: white;
+    z-index: -1;
+}
+
+.call_text{
+    position: absolute;
+    color: white;
+    font-family: "Righteous", sans-serif;
+    font-weight: 10;
+    font-style: normal;
+    left: 8.5vw;
+    top: 3vh;
+    font-size: 20px;
+    width: 200px;
+}
+
+.location_img{
+    position: absolute;
+    top: -.8vh;
+    left: -.8vw;
+}
+
+.pointer_background{
+    position: absolute;
+    top: .7vh;
+    left: .6vw;
+    height: 8.5vh;
+    width: 4.8vw;
+    background-color: #6f6f6e;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.location_text{
+    position: absolute;
+    color: white;
+    font-family: "Righteous", sans-serif;
+    font-weight: 10;
+    font-style: normal;
+    left: 9.5vw;
+    top: 3vh;
+    font-size: 20px;
+    width: 300px;
+}
+
+.contact_container{
+    position: inherit;
+    top: -1vh;
+}
+
+ a {
+    text-decoration: none; /* Remove underline */
+    color: inherit;        /* Inherit the color from the parent element */
+}
+
+.spline{
+    position: absolute;
+    z-index: 5;
+    left: -110px;
+    top: 50px;
+    transform: rotate(10deg);
+    height: 766px;
+    width: 1000px;
+}
+
+.experience_text_background{
+    position: absolute;
+    height: 53vh;
+    width: 46vw;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)); /* Darker gradient */
+    backdrop-filter: blur(12px) saturate(150%); /* Increased blur for stronger effect */
+    -webkit-backdrop-filter: blur(12px) saturate(150%); /* Same for webkit */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7); /* Darker and stronger shadow */    
+    left: 45%;
+    top: 24%;
+    border-radius: 30px;
+    overflow: hidden; /* Ensure content stays within rounded corners */
+    z-index: 3;
+}
+
+.text{
+    position: absolute;
+    color: white;
+    font-family: "Righteous", sans-serif;
+    font-weight: 10;
+    font-style: normal;
+    left: 2.5vw;
+    top: 3vh;
+    font-size: 19px;
+    width: 700px;
+    text-align: center;
+}
+

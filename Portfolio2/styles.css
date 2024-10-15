@@ -1,0 +1,321 @@
+body {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5));
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.watermark_hider{
+    position: absolute;
+    background-color: rgba(0,1,23,255);
+    height: 24px;
+    width: 150px;
+    top: 97%;
+    left: 27%;
+    z-index: 3;
+}
+
+.glass_background {
+    position: absolute;
+    height: 85vh;
+    width: 93vw;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)); /* Slightly more visible gradient */
+    backdrop-filter: blur(10px) saturate(150%); /* Increased blur and saturation for a more glassy effect */
+    -webkit-backdrop-filter: blur(10px) saturate(150%); /* Same for webkit */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Slightly more visible border */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5); /* Darker shadow for more depth */
+    left: 4%;
+    top: 7%;
+    border-radius: 30px;
+    overflow: hidden; /* Ensure content stays within rounded corners */
+    z-index: 1;
+}
+
+.image{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.title{
+    position: absolute;
+    left: 50.9%;
+    top: 3%;
+    z-index: 3;
+    font-size: 50px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.title_background{
+    position: relative;
+    top: 3.5%;
+    left: 50%;
+    z-index: 3;
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    border: 6px solid white;
+    rotate: 50deg;
+}
+
+.portfolio{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    left: 40%;
+    top: 5.8%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.portfolio::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: white;
+    width: 0%; /* Start with width at 0% */
+    left: 0px;
+    opacity: 0; /* Start with opacity at 0 */
+    transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition for width and opacity */
+}
+
+.portfolio:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make visible on hover */
+}
+
+.projects{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    left: 31%;
+    top: 5.8%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+nav a {
+    text-decoration: none; /* Remove underline */
+    color: inherit;        /* Inherit the color from the parent element */
+}
+
+.projects::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: white;
+    width: 0%; /* Start with width at 0% */
+    left: 0px;
+    opacity: 0; /* Start with opacity at 0 */
+    transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition for width and opacity */
+}
+
+.projects:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make visible on hover */
+}
+
+.experience{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    left: 57%;
+    top: 5.8%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.experience::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: white;
+    width: 0%; /* Start with width at 0% */
+    left: 0px;
+    opacity: 0; /* Start with opacity at 0 */
+    transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition for width and opacity */
+}
+
+.experience:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make visible on hover */
+}
+
+.contact{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    left: 67%;
+    top: 5.8%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.contact::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: white;
+    width: 0%; /* Start with width at 0% */
+    left: 0px;
+    opacity: 0; /* Start with opacity at 0 */
+    transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition for width and opacity */
+}
+
+.contact:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make visible on hover */
+}
+
+.profile_background{
+    position: absolute;
+    left: 60%;
+    top: 20%;
+    height: 520px;
+    width: 400px;
+    background-color: white;
+    border-radius: 11%;
+}
+
+.picture{
+    position: absolute;
+    top: 2%;
+    left: 2.2%;
+}
+
+.info_box{
+    position: static;
+}
+
+.intro_1{
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 20px;
+}
+
+.intro_2{
+    position: absolute;
+    top: 24%;
+    left: 14.5%;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 60px;
+}
+
+.intro_3{
+    position: absolute;
+    top: 31%;
+    left: 14.5%;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 75px;
+}
+
+.intro_4{
+    position: absolute;
+    top: 52%;
+    left: 14.5%;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    width: 500px;
+}
+
+.label{
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.form{
+    position: absolute;
+    top: 69%;
+    left: 14.5%;
+}
+.textbox{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    border-radius: 10px;
+    width: 320px;
+    border: 2px solid rgb(0, 0, 0);
+    height: 40px;
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+}
+
+.submit{
+    position:absolute;
+    top: 105%;
+    left: 258px;
+    height: 44.5px;
+    width: 70px;
+    border-radius: 10px;
+    border-color: transparent;
+    border: 2px solid  black;
+    background-color: rgb(0, 0, 0);
+}
+
+.arrow{
+    position: absolute;
+    left: 275px;
+    top: 25px;
+    cursor: pointer;
+}
+
+.contact_button {
+    position: absolute;
+    top: 72%;
+    left: 37%;
+    height: 40px;
+    width: 100px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: 2px solid black;
+
+    /* Flexbox alignment */
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+}
+
+
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color from the parent element */
+}
+
+

@@ -1,0 +1,284 @@
+body {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5));
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.loading_background{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 3;
+    animation: loading 1s 1 linear forwards;
+    animation-delay: 1s;
+}
+
+@keyframes loading {
+    0% {
+        z-index: 3;
+    }
+
+    50%{
+        opacity: 0;
+    }
+    100% {
+        z-index: -1;
+    }
+}
+
+.loading_text{
+    position: absolute;
+    top: 60%;
+    left: 39%;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    z-index: 3;
+    color: black;
+    font-size: 20px;
+}
+
+/* From Uiverse.io by xXJollyHAKERXx */ 
+.spinner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: linear-gradient(rgb(186, 66, 255) 35%,rgb(0, 225, 255));
+    width: 100px;
+    height: 100px;
+    animation: spinning82341 1.7s linear infinite;
+    text-align: center;
+    border-radius: 50px;
+    filter: blur(1px);
+    box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
+    z-index: 10;
+    margin-left: -50px; /* Half the width */
+    margin-top: -50px;  /* Half the height */
+  }
+  
+  .spinner1 {
+    position: absolute;
+    background-color: rgb(36, 36, 36);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    filter: blur(10px);
+    z-index: 10;
+  }
+  
+  @keyframes spinning82341 {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+.image{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.glass_background {
+    position: absolute;
+    height: 85vh;
+    width: 93vw;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)); /* Slightly more visible gradient */
+    backdrop-filter: blur(10px) saturate(150%); /* Increased blur and saturation for a more glassy effect */
+    -webkit-backdrop-filter: blur(10px) saturate(150%); /* Same for webkit */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Slightly more visible border */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5); /* Darker shadow for more depth */
+    left: 4%;
+    top: 7%;
+    border-radius: 30px;
+    overflow: hidden; /* Ensure content stays within rounded corners */
+    z-index: 1;
+}
+
+.info{
+    position: absolute;
+    top: 7%;
+    left: 11%;
+    width: 25vw;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    z-index: 2;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    
+}
+
+.model{
+    position: absolute;
+    left: 20%;
+    top: -2%;
+    width: 100%; /* Takes the full width of the parent container */
+    height: 100vh; /* Full viewport height */
+    max-width: 100%; /* Prevents overflow */
+    z-index: 1;
+}
+
+
+.portfolio{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 20px;
+    left: -35%;
+    top: 85%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transform: rotate(-90deg);
+}
+
+.portfolio::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: white;
+    width: 0%; /* Start with width at 0% */
+    left: 0px;
+    opacity: 0; /* Start with opacity at 0 */
+    transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition for width and opacity */
+}
+
+.portfolio:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make visible on hover */
+}
+
+.projects{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    left: -33%;
+    top: 65%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transform: rotate(-90deg);
+}
+
+nav a {
+    text-decoration: none; /* Remove underline */
+    color: inherit;/* Inherit the color from the parent element */
+    z-index: 10;
+}
+
+.projects::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: white;
+    width: 0%; /* Start with width at 0% */
+    left: 0px;
+    opacity: 0; /* Start with opacity at 0 */
+    transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition for width and opacity */
+    z-index: 10;
+}
+
+.projects:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make visible on hover */
+    z-index: 10;
+}
+
+.experience{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    left: -33%;
+    top: 28%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transform: rotate(-90deg);
+}
+
+.experience::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: white;
+    width: 0%; /* Start with width at 0% */
+    left: 0px;
+    opacity: 0; /* Start with opacity at 0 */
+    transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition for width and opacity */
+    z-index: 10;
+}
+
+.experience:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make visible on hover */
+}
+
+.contact{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    left: -30%;
+    top: 8%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transform: rotate(-90deg);
+}
+
+.contact::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: white;
+    width: 0%; /* Start with width at 0% */
+    left: 0px;
+    opacity: 0; /* Start with opacity at 0 */
+    transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition for width and opacity */
+}
+
+.contact:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make visible on hover */
+}
+
+.title{
+    position: absolute;
+    left: -25.5%;
+    top: 45%;
+    z-index: 3;
+    font-size: 50px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    z-index: 5;
+    cursor: pointer;
+    transform: rotate(-90deg);
+}
+
+.title_background{
+    position: absolute;
+    top: 45%;
+    left: -28%;
+    z-index: 3;
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    border: 6px solid white;
+    rotate: 50deg;
+}

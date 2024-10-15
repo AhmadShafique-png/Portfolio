@@ -1,0 +1,327 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Righteous', sans-serif;
+    background-color: #1c1c1c;
+    color: white;
+    overflow: hidden;
+}
+
+
+
+.title{
+    position: absolute;
+    left: 50.9%;
+    top: 3%;
+    z-index: 3;
+    font-size: 50px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    z-index: 5;
+    cursor: pointer
+}
+
+.title_background{
+    position: absolute;
+    top: 3.4%;
+    left: 50.1%;
+    z-index: 3;
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    border: 6px solid white;
+    rotate: 46deg;
+}
+
+.portfolio{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    left: 40%;
+    top: 5.8%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.portfolio::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: white;
+    width: 0%; /* Start with width at 0% */
+    left: 0px;
+    opacity: 0; /* Start with opacity at 0 */
+    transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition for width and opacity */
+}
+
+.portfolio:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make visible on hover */
+}
+
+.projects{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    left: 31%;
+    top: 5.8%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+nav a {
+    text-decoration: none; /* Remove underline */
+    color: inherit;        /* Inherit the color from the parent element */
+}
+
+.projects::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: white;
+    width: 0%; /* Start with width at 0% */
+    left: 0px;
+    opacity: 0; /* Start with opacity at 0 */
+    transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition for width and opacity */
+}
+
+.projects:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make visible on hover */
+}
+
+.experience{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    left: 57%;
+    top: 5.8%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.experience::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: white;
+    width: 0%; /* Start with width at 0% */
+    left: 0px;
+    opacity: 0; /* Start with opacity at 0 */
+    transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition for width and opacity */
+}
+
+.experience:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make visible on hover */
+}
+
+.contact{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    left: 67%;
+    top: 5.8%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.contact::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: white;
+    width: 0%; /* Start with width at 0% */
+    left: 0px;
+    opacity: 0; /* Start with opacity at 0 */
+    transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition for width and opacity */
+}
+
+.contact:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make visible on hover */
+}
+
+ a {
+    text-decoration: none; /* Remove underline */
+    color: inherit;/* Inherit the color from the parent element */
+}
+
+.divider{
+    position: absolute;
+    left: 883px;
+    top: 170px;
+    height: 700px;
+    width: 2px;
+    background-color: white;
+    z-index:1;
+}
+
+.contact_info{
+    position: relative;
+    top: -70px;
+}
+
+.square1{
+    position: absolute;
+    top: 300px;
+    left: 1050px;
+    z-index: 10;
+    height: 100px;
+    width: 500px;
+    background-color: #1c1c1c;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.square2{
+    position: absolute;
+    top: 420px;
+    left: 1050px;
+    z-index: 10;
+    height: 100px;
+    width: 500px;
+    background-color: #1c1c1c;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.square3{
+    position: absolute;
+    top: 540px;
+    left: 1050px;
+    z-index: 10;
+    height: 100px;
+    width: 500px;
+    background-color: #1c1c1c;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.square4{
+    position: absolute;
+    top: 660px;
+    left: 1050px;
+    z-index: 10;
+    height: 100px;
+    width: 500px;
+    background-color: #1c1c1c;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.square5{
+    position: absolute;
+    top: 780px;
+    left: 1050px;
+    z-index: 10;
+    height: 100px;
+    width: 500px;
+    background-color: #1c1c1c;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.image_background {
+    position: absolute;
+    top: 370px;
+    left: 200px;
+    height: 500px;
+    width: 500px;
+    background-color: #1c1c1c;
+    z-index: 10;
+    border-radius: 50%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.9);
+}
+
+.info{
+    position: absolute;
+    top: 170px;
+    left: 140px;
+    font-size: 50px;
+    width: 600px;
+    text-align: center;
+}
+
+.image1{
+    position: relative;
+    top: 10px;
+    left: 5px;
+}
+
+.image2{
+    position: relative;
+    top: 10px;
+    left: 5px;
+}
+
+.image3{
+    position: relative;
+    top: 4px;
+    left: 0px;
+}
+
+.image4{
+    position: relative;
+    top: 14px;
+    left: 8px;
+}
+
+.image5{
+    position: relative;
+    top: -3px;
+    left: -6px;
+}
+
+.number{
+    position:absolute;
+    font-size: 20px;
+    left: 190px;
+    top: 20px;
+}
+
+.gmail{
+    position:absolute;
+    font-size: 20px;
+    left: 140px;
+    top: 20px;
+}
+
+.location{
+    position:absolute;
+    font-size: 20px;
+    left: 160px;
+    top: 20px;
+}
+
+.github{
+    position:absolute;
+    font-size: 19px;
+    left: 110px;
+    top: 22px;
+    text-align: center;
+}
+
+.insta2{
+    position:absolute;
+    font-size: 23px;
+    left: 190px;
+    top: 10px;
+    text-align: center;
+    z-index: 20;
+}
+

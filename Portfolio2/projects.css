@@ -1,0 +1,585 @@
+body {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5));
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.glass_background {
+    position: absolute;
+    height: 850px;
+    width: 1590px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)); /* Slightly more visible gradient */
+    backdrop-filter: blur(10px) saturate(150%); /* Increased blur and saturation for a more glassy effect */
+    -webkit-backdrop-filter: blur(10px) saturate(150%); /* Same for webkit */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Slightly more visible border */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5); /* Darker shadow for more depth */
+    left: 4%;
+    top: 7%;
+    border-radius: 30px;
+    overflow: hidden; /* Ensure content stays within rounded corners */
+    z-index: 1;
+}
+
+.image{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.title{
+    position: absolute;
+    left: 50.9%;
+    top: 3%;
+    z-index: 3;
+    font-size: 50px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    cursor:pointer;
+}
+
+.title_background{
+    position: absolute;
+    top: 1.5%;
+    left: 10%;
+    z-index: 3;
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    border: 6px solid white;
+    rotate: 50deg;
+    z-index: 10;
+}
+
+.title_background2{
+    position: absolute;
+    top: 3.5%;
+    left: 50.02%;
+    z-index: 3;
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    border: 6px solid white;
+    rotate: 50deg;
+    z-index: 2;
+}
+
+
+.portfolio{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    left: 40%;
+    top: 5.8%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.portfolio::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: white;
+    width: 0%; /* Start with width at 0% */
+    left: 0px;
+    opacity: 0; /* Start with opacity at 0 */
+    transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition for width and opacity */
+}
+
+.portfolio:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make visible on hover */
+}
+
+.projects{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    left: 31%;
+    top: 5.8%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+nav a {
+    text-decoration: none; /* Remove underline */
+    color: inherit;        /* Inherit the color from the parent element */
+}
+
+.projects::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: white;
+    width: 0%; /* Start with width at 0% */
+    left: 0px;
+    opacity: 0; /* Start with opacity at 0 */
+    transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition for width and opacity */
+}
+
+.projects:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make visible on hover */
+}
+
+.experience{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    left: 57%;
+    top: 5.8%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.experience::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: white;
+    width: 0%; /* Start with width at 0% */
+    left: 0px;
+    opacity: 0; /* Start with opacity at 0 */
+    transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition for width and opacity */
+}
+
+.experience:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make visible on hover */
+}
+
+.contact{
+    position: absolute;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    left: 67%;
+    top: 5.8%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.contact::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: white;
+    width: 0%; /* Start with width at 0% */
+    left: 0px;
+    opacity: 0; /* Start with opacity at 0 */
+    transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition for width and opacity */
+}
+
+.contact:hover::after {
+    width: 100%; /* Expand to full width on hover */
+    opacity: 1; /* Make visible on hover */
+}
+
+.cards1 {
+    position: absolute;
+    display: flex;
+    gap: 1rem;
+    max-width: 40rem;
+    top: 0px;
+    z-index:5;
+}
+
+.card{
+    position: relative;
+    left: 185px;
+    top: 28vh;
+    width: 50rem;
+    height: 300px;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    background: var(--background);
+    transition: 1.4s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    flex: 0.25;
+    z-index:5;
+}
+
+.card img{
+    position: relative;
+    height: 21rem;
+    object-fit: fill;
+    width: max-content;
+    z-index:5;
+}
+
+.card:hover{
+    flex: 7;
+}
+
+.card:nth-child(1) img{
+    left: -1rem;
+}
+
+.card:nth-child(2) img{
+    left: 0;
+}
+
+.card:nth-child(3) img{
+    left: 0;
+}
+
+.card:nth-child(4) img{
+    left: 0;
+}
+
+.card_background{
+    position: absolute;
+    top: 24vh;
+    height: 370px;
+    width: 690px;
+    left: 10vw;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6); /* Maintain depth */
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border to enhance effect */
+    border-radius: 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+
+.description_background{
+    position: absolute;
+    top: 24vh;
+    height: 370px;
+    width: 690px;
+    left: 53vw;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6); /* Maintain depth */
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border to enhance effect */
+    border-radius: 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+.title_background{
+    position: absolute;
+    top: 580px;
+    height: 200px;
+    width: 690px;
+    left: 6vw;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6); /* Maintain depth */
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border to enhance effect */
+    border-radius: 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+    transform: rotate(-50deg)
+}
+
+.button_background{
+    position: absolute;
+    top: 650px;
+    height: 90px;
+    width: 240px;
+    left: 1350px;;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6); /* Maintain depth */
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border to enhance effect */
+    border-radius: 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+.contact_button_background{
+    position: absolute;
+    top: 770px;
+    height: 80px;
+    width: 240px;
+    left: 79vw;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6); /* Maintain depth */
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border to enhance effect */
+    border-radius: 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+.contactinfo_background{
+    position: absolute;
+    top: 650px;
+    height: 200px;
+    width: 410px;
+    left: 900px;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6); /* Maintain depth */
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border to enhance effect */
+    border-radius: 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit;        /* Inherit the color from the parent element */
+}
+
+.title1 {
+    position: absolute;
+    top: 700px;
+    left: 230px;
+    font-size: 70px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.description_1 {
+    position: absolute;
+    top: 270px;
+    left: 920px;
+    font-size: 23px;
+    width: 650px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    z-index: 5;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.title2 {
+    position: absolute;
+    top: 700px;
+    left: 210px;
+    font-size: 70px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.description_2 {
+    position: absolute;
+    top: 270px;
+    left: 920px;
+    font-size: 23px;
+    width: 650px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    z-index: 5;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.title3 {
+    position: absolute;
+    top: 700px;
+    left: 320px;
+    font-size: 70px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.description_3 {
+    position: absolute;
+    top: 270px;
+    left: 920px;
+    font-size: 23px;
+    width: 650px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    z-index: 5;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.title4 {
+    position: absolute;
+    top: 700px;
+    left: 320px;
+    font-size: 70px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.description_4 {
+    position: absolute;
+    top: 270px;
+    left: 920px;
+    font-size: 23px;
+    width: 650px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    z-index: 5;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.Projectlink1{
+    position: absolute;
+    top: 678px;
+    left: 1150px;
+    font-size: 30px;
+    width: 650px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    z-index: 5;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.Projectlink2{
+    position: absolute;
+    top: 678px;
+    left: 1150px;
+    font-size: 30px;
+    width: 650px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    z-index: 5;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.Projectlink3{
+    position: absolute;
+    top: 678px;
+    left: 1150px;
+    font-size: 30px;
+    width: 650px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    z-index: 5;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.Projectlink4{
+    position: absolute;
+    top: 678px;
+    left: 1150px;
+    font-size: 30px;
+    width: 650px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    z-index: 5;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.contactinfo_1{
+    position: absolute;
+    top: 700px;
+    left: 900px;
+    font-size: 40px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    z-index: 5;
+    width: 400px;
+    text-align: center;
+    opacity: 0;
+}
+
+.contactinfo_2{
+    position: absolute;
+    top: 785px;
+    left: 1270px;
+    font-size: 40px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    z-index: 5;
+    width: 400px;
+    text-align: center;
+    z-index: 6;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.show-title {
+    animation: show 2s forwards; /* Apply the animation */
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
